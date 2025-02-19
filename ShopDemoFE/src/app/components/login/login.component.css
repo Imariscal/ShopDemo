@@ -1,0 +1,28 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.input-group-text {
+    background: #e9ecef;
+    border-right: none;
+}
+
+.form-control {
+    border-left: none;
+}
+
+
+.custom-color{
+    background-color: #6f42c1;
+}
+.custom-color-font {
+    color:  #6f42c1;;
+}

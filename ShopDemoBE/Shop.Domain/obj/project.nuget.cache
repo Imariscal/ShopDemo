@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "DkX/ZvjOpmCdgEfvZBz2w13cYsS3FYbtHY9zC2lcTHEk2RPHbq74AlvPJ3YOiRUgmBsBC4X7Qoi5NVFWrlyMXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\maris\\source\\repos\\ShopDemo\\ShopDemoBE\\Shop.Domain\\Shop.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maris\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}

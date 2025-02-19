@@ -1,0 +1,69 @@
+<div class="container">
+
+    <form [formGroup]="clientForm" (ngSubmit)="save()">
+        <input type="hidden" formControlName="id">
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" [class.is-invalid]="getErrorMessage('name')" formControlName="name"
+                placeholder="Enter name">
+            @if (getErrorMessage('name')) {
+            <div class="invalid-feedback">
+                {{ getErrorMessage('name') }}
+            </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control " [class.is-invalid]="getErrorMessage('lastName')"
+                formControlName="lastName" placeholder="Enter last name">
+            @if (getErrorMessage('lastName')) {
+            <div class="invalid-feedback">
+                {{ getErrorMessage('lastName') }}
+            </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Adress</label>
+            <input type="text" class="form-control" [class.is-invalid]="getErrorMessage('address')"
+                formControlName="address" placeholder="Enter Address">
+            @if (getErrorMessage('address')) {
+            <div class="invalid-feedback">
+                {{ getErrorMessage('address') }}
+            </div>
+            }
+        </div>
+
+        <hr>
+
+        <div class="d-flex justify-content mt-4">
+            <h4> Items </h4>
+
+        </div>
+        <div class="d-flex justify-content mt-4 mr-3">
+            <select name="item" class="form-select mr-2"  >
+                @for (item of items; track item.id) {
+                <option [value]="item">{{ item.description }}</option>
+                }
+                </select>
+            <button type="submit" class="btn btn-primary pl-2" [disabled]="clientForm.invalid">
+                <i class="bi bi-add"></i> Add
+            </button>
+        </div>
+
+        <div class="d-flex justify-content mt-4">
+            <app-grid [columns]="gridColumns" [data]="clientItems"></app-grid>
+        </div>
+
+        <div class="d-flex justify-content-end mt-4">
+            <button type="submit" class="btn btn-primary me-2" [disabled]="clientForm.invalid">
+                <i class="bi bi-save"></i> Save
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="cancel()">
+                <i class="bi bi-x-circle"></i> Cancel
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+.header-container {
+    height: 60px;
+    width: 95%;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-left: 84px;
+}
+
+.toggle-menu {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+}
