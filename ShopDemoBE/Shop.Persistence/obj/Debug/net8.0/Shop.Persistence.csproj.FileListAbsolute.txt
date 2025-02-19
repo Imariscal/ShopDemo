@@ -36,3 +36,4 @@ C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Persistence\obj\Debug\net8.
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Persistence\obj\Debug\net8.0\Shop.Persistence.pdb
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Persistence\obj\Debug\net8.0\Shop.Persistence.genruntimeconfig.cache
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Persistence\obj\Debug\net8.0\ref\Shop.Persistence.dll
+C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Persistence\obj\Debug\net8.0\Shop.Persistence.sourcelink.json

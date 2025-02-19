@@ -16,7 +16,7 @@ namespace Shop.API.Controllers
         [HttpGet] 
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetEmployeeData()
+        public async Task<IActionResult> Get()
         {
             async Task<IEnumerable<ShopStoreViewModel>> predicate() => await service.GetShopStoreDataAsync();
             var response = await SafeExecutor<IEnumerable<ShopStoreViewModel>>.ExecAsync(predicate);
@@ -27,7 +27,7 @@ namespace Shop.API.Controllers
         [Route("GetShopStoreById/{shopStoreId}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetShopStoreById(Guid shopId)
+        public async Task<IActionResult> GetById(Guid shopId)
         {
             async Task<ShopStoreViewModel> predicate() => await service.GetShopStoreByIdAsync(shopId);
             var response = await SafeExecutor<ShopStoreViewModel>.ExecAsync(predicate);
@@ -37,7 +37,7 @@ namespace Shop.API.Controllers
         [HttpPost] 
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetEmployeeData(ShopStoreDTO shopStore)
+        public async Task<IActionResult> Post(ShopStoreDTO shopStore)
         {
             async Task<ShopStoreViewModel> predicate() => await service.PostShopStore(shopStore);
             var response = await SafeExecutor<ShopStoreViewModel>.ExecAsync(predicate);
@@ -47,7 +47,7 @@ namespace Shop.API.Controllers
         [HttpPut("{shopStoreId}")] 
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> UpdateEmployee(Guid shopStoreId, [FromBody] ShopStoreDTO shopStore)
+        public async Task<IActionResult> Put(Guid shopStoreId, [FromBody] ShopStoreDTO shopStore)
         {
             async Task<ShopStoreViewModel> predicate() => await service.PutShopStore(shopStoreId, shopStore);
             var response = await SafeExecutor<ShopStoreViewModel>.ExecAsync(predicate);
@@ -58,7 +58,7 @@ namespace Shop.API.Controllers
         [HttpDelete("{shopStoreId}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> DeleteItem(Guid shopStoreId)
+        public async Task<IActionResult> Delete(Guid shopStoreId)
         {
             async Task predicate() => await service.DeleteShopStore(shopStoreId);
             var response = await SafeExecutor.ExecAsync(predicate);

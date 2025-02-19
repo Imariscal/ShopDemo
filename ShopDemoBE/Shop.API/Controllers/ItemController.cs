@@ -17,7 +17,7 @@ namespace Shop.API.Controllers
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetEmployeeData()
+        public async Task<IActionResult> Get()
         {
             async Task<IEnumerable<ItemViewModel>> predicate() => await service.GetItemDataAsync();
             var response = await SafeExecutor<IEnumerable<ItemViewModel>>.ExecAsync(predicate);
@@ -29,7 +29,7 @@ namespace Shop.API.Controllers
         [Route("GetItemById/{itemId}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetItemById(Guid itemId)
+        public async Task<IActionResult> GetById(Guid itemId)
         {
             async Task<ItemViewModel> predicate() => await service.GetItemByIdAsync(itemId);
             var response = await SafeExecutor<ItemViewModel>.ExecAsync(predicate);
@@ -39,7 +39,7 @@ namespace Shop.API.Controllers
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetEmployeeData(ItemDTO item)
+        public async Task<IActionResult> Post(ItemDTO item)
         {
             async Task<ItemViewModel> predicate() => await service.PostItem(item);
             var response = await SafeExecutor<ItemViewModel>.ExecAsync(predicate);
@@ -49,7 +49,7 @@ namespace Shop.API.Controllers
         [HttpPut("{itemId}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> UpdateEmployee(Guid itemId, [FromBody] ItemDTO item)
+        public async Task<IActionResult> Put(Guid itemId, [FromBody] ItemDTO item)
         {
             async Task<ItemViewModel> predicate() => await service.UpdteItem(itemId, item);
             var response = await SafeExecutor<ItemViewModel>.ExecAsync(predicate);
@@ -59,7 +59,7 @@ namespace Shop.API.Controllers
         [HttpDelete("{itemId}")] 
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> DeleteItem(Guid itemId)
+        public async Task<IActionResult> Delete(Guid itemId)
         {
             async Task predicate() => await service.DeleteItem(itemId);
             var response = await SafeExecutor.ExecAsync(predicate);

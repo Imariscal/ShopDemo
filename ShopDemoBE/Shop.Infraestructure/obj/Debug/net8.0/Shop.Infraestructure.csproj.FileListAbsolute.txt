@@ -36,3 +36,4 @@ C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Infraestructure\obj\Debug\n
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Infraestructure\obj\Debug\net8.0\refint\Shop.Infraestructure.dll
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Infraestructure\obj\Debug\net8.0\Shop.Infraestructure.pdb
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Infraestructure\obj\Debug\net8.0\ref\Shop.Infraestructure.dll
+C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Infraestructure\obj\Debug\net8.0\Shop.Infraestructure.sourcelink.json

@@ -10,7 +10,7 @@ namespace Shop.Application.Services.Contracts
     {
         Task<IEnumerable<ClientViewModel>> GetClientDataAsync();
         Task<ClientViewModel> GetClientByIdAsync(Guid clientId);
-        Task<ClientViewModel> PostClient(ClientViewModel client);
+        Task<ClientViewModel> PostClient(ClientDTO client);
         Task<ClientViewModel> UpdateClient(Guid clienId, ClientDTO client);
         Task<bool> DeleteClient(Guid clienId);
         Task<ClientViewModel> PostItemToClient(Guid clientId, Guid itemId);

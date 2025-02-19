@@ -40,3 +40,4 @@ C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Application\obj\Debug\net8.
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Application\obj\Debug\net8.0\refint\Shop.Application.dll
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Application\obj\Debug\net8.0\Shop.Application.pdb
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Application\obj\Debug\net8.0\ref\Shop.Application.dll
+C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.Application\obj\Debug\net8.0\Shop.Application.sourcelink.json

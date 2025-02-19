@@ -18,7 +18,7 @@ namespace Shop.Application.Services
             return await handler.Handle(new GetClientQuery());
         }
 
-        public async Task<ClientViewModel> PostClient(ClientViewModel client)
+        public async Task<ClientViewModel> PostClient(ClientDTO client)
         {
             var handler = mediator.GetCommandHandler<PostClientCommand, ClientViewModel>();
             return await handler.Handle(new PostClientCommand(client));

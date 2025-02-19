@@ -20,3 +20,4 @@ C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.CrossCutting\obj\Debug\net8
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.CrossCutting\obj\Debug\net8.0\refint\Shop.CrossCutting.dll
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.CrossCutting\obj\Debug\net8.0\Shop.CrossCutting.pdb
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.CrossCutting\obj\Debug\net8.0\ref\Shop.CrossCutting.dll
+C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.CrossCutting\obj\Debug\net8.0\Shop.CrossCutting.sourcelink.json

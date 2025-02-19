@@ -18,7 +18,7 @@ namespace Shop.API.Controllers
         [Route("ById")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetClientData(Guid clientId)
+        public async Task<IActionResult> GetById(Guid clientId)
         {
             async Task<ClientViewModel> predicate() => await service.GetClientByIdAsync(clientId);
             var response = await SafeExecutor<ClientViewModel>.ExecAsync(predicate);
@@ -29,7 +29,7 @@ namespace Shop.API.Controllers
         [HttpGet]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetClientData()
+        public async Task<IActionResult> Get()
         {
             async Task<IEnumerable<ClientViewModel>> predicate() => await service.GetClientDataAsync();
             var response = await SafeExecutor<IEnumerable<ClientViewModel>>.ExecAsync(predicate);
@@ -39,7 +39,7 @@ namespace Shop.API.Controllers
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetClientData(ClientViewModel client)
+        public async Task<IActionResult> Post(ClientDTO client)
         {
             async Task<ClientViewModel> predicate() => await service.PostClient(client);
             var response = await SafeExecutor<ClientViewModel>.ExecAsync(predicate);
@@ -49,7 +49,7 @@ namespace Shop.API.Controllers
         [HttpPut("{clientId}")]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> UpdateClient([FromRoute] Guid clientId, [FromBody] ClientDTO client)
+        public async Task<IActionResult> Put([FromRoute] Guid clientId, [FromBody] ClientDTO client)
         {
              async Task<ClientViewModel> predicate() => await service.UpdateClient(clientId, client);
             var response = await SafeExecutor<ClientViewModel>.ExecAsync(predicate);
@@ -83,7 +83,7 @@ namespace Shop.API.Controllers
         [HttpDelete("{clientId}")] 
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> DeleteClient(Guid clientId)
+        public async Task<IActionResult> Delete(Guid clientId)
         {
             async Task predicate() => await service.DeleteClient(clientId);
             var response = await SafeExecutor.ExecAsync(predicate);

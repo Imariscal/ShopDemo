@@ -10,9 +10,9 @@ using Shop.Domain.ViewModels;
 
 namespace Shop.Application.BussinesProcess.Client.Command
 {
-    public class PostClientCommand(ClientViewModel _client) :  ICommand<ClientViewModel>
+    public class PostClientCommand(ClientDTO _client) :  ICommand<ClientViewModel>
     {
-        public ClientViewModel client { get; set; } = _client;   
+        public ClientDTO client { get; set; } = _client;   
     }
 
     public class PostClientCommandHandler(

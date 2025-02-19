@@ -201,3 +201,4 @@ C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.API\obj\Debug\net8.0\refint
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.API\obj\Debug\net8.0\Shop.API.pdb
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.API\obj\Debug\net8.0\Shop.API.genruntimeconfig.cache
 C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.API\obj\Debug\net8.0\ref\Shop.API.dll
+C:\Users\maris\source\repos\ShopDemo\ShopDemoBE\Shop.API\obj\Debug\net8.0\Shop.API.sourcelink.json
